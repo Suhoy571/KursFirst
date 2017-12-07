@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace KursFirst
@@ -134,6 +133,12 @@ namespace KursFirst
             //Метод Dispose, включающий в себя метод Close();
             //Разрывает соединение и освобождает ресурсы
             conn.Dispose();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Company Form2 = new Company();
+            Form2.ShowDialog();
         }
     }
 }
