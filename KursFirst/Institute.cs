@@ -21,17 +21,17 @@ namespace KursFirst
         {
             if (string.IsNullOrEmpty(textBox1.Text.ToString()))
             {
-                MessageBox.Show("Вы не ввели код кампании.", "Ошибка.");
+                MessageBox.Show("Вы не ввели код института.", "Ошибка.");
                 return false;
             }
             if (string.IsNullOrEmpty(textBox2.Text))
             {
-                MessageBox.Show("Вы не ввели название кампании.", "Ошибка.");
+                MessageBox.Show("Вы не ввели название института.", "Ошибка.");
                 return false;
             }
             if (string.IsNullOrEmpty(textBox3.Text))
             {
-                MessageBox.Show("Вы не ввели краткое название кампании.", "Ошибка.");
+                MessageBox.Show("Вы не ввели краткое название института.", "Ошибка.");
                 return false;
             }
             return true;
@@ -41,7 +41,7 @@ namespace KursFirst
         {
             if (string.IsNullOrEmpty(textBox4.Text.ToString()))
             {
-                MessageBox.Show("Вы не ввели код кампании для удаления.", "Ошибка.");
+                MessageBox.Show("Вы не ввели код института для удаления.", "Ошибка.");
                 return false;
             }
             return true;
@@ -88,6 +88,9 @@ namespace KursFirst
                 }
                 finally
                 {
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
                     conn.Close();
                 }
             }
@@ -126,6 +129,7 @@ namespace KursFirst
                 }
                 finally
                 {
+                    textBox4.Clear();
                     conn.Close();
                 }
             }
@@ -147,12 +151,12 @@ namespace KursFirst
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
         
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back  || e.KeyChar == (char)Keys.Space);
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)

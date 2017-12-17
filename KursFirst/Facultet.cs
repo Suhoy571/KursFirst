@@ -151,12 +151,12 @@ namespace KursFirst
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)

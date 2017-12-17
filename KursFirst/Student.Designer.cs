@@ -53,7 +53,7 @@
             this.button2.Location = new System.Drawing.Point(247, 304);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 26);
-            this.button2.TabIndex = 32;
+            this.button2.TabIndex = 9;
             this.button2.Text = "Удалить";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -63,7 +63,7 @@
             this.button1.Location = new System.Drawing.Point(247, 223);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 26);
-            this.button1.TabIndex = 30;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -74,7 +74,7 @@
             this.textBox5.Location = new System.Drawing.Point(166, 167);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(167, 22);
-            this.textBox5.TabIndex = 31;
+            this.textBox5.TabIndex = 5;
             this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
@@ -94,7 +94,7 @@
             this.textBox4.Location = new System.Drawing.Point(166, 139);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(167, 22);
-            this.textBox4.TabIndex = 29;
+            this.textBox4.TabIndex = 4;
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
@@ -114,7 +114,7 @@
             this.textBox3.Location = new System.Drawing.Point(166, 111);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(167, 22);
-            this.textBox3.TabIndex = 28;
+            this.textBox3.TabIndex = 3;
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
@@ -134,7 +134,7 @@
             this.textBox2.Location = new System.Drawing.Point(166, 83);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(167, 22);
-            this.textBox2.TabIndex = 27;
+            this.textBox2.TabIndex = 2;
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
@@ -154,7 +154,7 @@
             this.textBox1.Location = new System.Drawing.Point(166, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(167, 22);
-            this.textBox1.TabIndex = 26;
+            this.textBox1.TabIndex = 1;
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -204,7 +204,7 @@
             this.textBox6.Location = new System.Drawing.Point(166, 195);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(167, 22);
-            this.textBox6.TabIndex = 31;
+            this.textBox6.TabIndex = 6;
             this.textBox6.Enter += new System.EventHandler(this.textBox6_Enter);
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
@@ -224,7 +224,7 @@
             this.textBox7.Location = new System.Drawing.Point(166, 276);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(167, 22);
-            this.textBox7.TabIndex = 31;
+            this.textBox7.TabIndex = 8;
             this.textBox7.Enter += new System.EventHandler(this.textBox7_Enter);
             this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 

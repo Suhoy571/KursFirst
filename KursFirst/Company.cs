@@ -161,6 +161,9 @@ namespace KursFirst
                 }
                 finally
                 {
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
                     conn.Close();
                 }
             }
@@ -199,6 +202,7 @@ namespace KursFirst
                 }
                 finally
                 {
+                    textBox4.Clear();
                     conn.Close();
                 }
             }

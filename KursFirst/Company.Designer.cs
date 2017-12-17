@@ -138,7 +138,7 @@
             this.textBox4.Location = new System.Drawing.Point(167, 225);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(167, 22);
-            this.textBox4.TabIndex = 4;
+            this.textBox4.TabIndex = 5;
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
@@ -147,7 +147,7 @@
             this.button1.Location = new System.Drawing.Point(248, 143);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 26);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

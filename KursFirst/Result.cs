@@ -58,12 +58,6 @@ namespace KursFirst
                 MessageBox.Show("Вы не ввели должность руководителя от кампании.", "Ошибка.");
                 return false;
             }
-
-            if (string.IsNullOrEmpty(textBox9.Text.ToString()))
-            {
-                MessageBox.Show("Вы не ввели оценку за практику.", "Ошибка.");
-                return false;
-            }
             return true;
         }
 
@@ -211,27 +205,27 @@ namespace KursFirst
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void textBox9_KeyPress(object sender, KeyPressEventArgs e)

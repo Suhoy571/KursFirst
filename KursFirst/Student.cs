@@ -57,7 +57,7 @@ namespace KursFirst
 
         private bool Button_Press_Delete()
         {
-            if (string.IsNullOrEmpty(textBox4.Text.ToString()))
+            if (string.IsNullOrEmpty(textBox7.Text.ToString()))
             {
                 MessageBox.Show("Вы не ввели код зачетки студента для удаления.", "Ошибка.");
                 return false;
@@ -144,7 +144,7 @@ namespace KursFirst
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
@@ -230,68 +230,6 @@ namespace KursFirst
                     int Facultet = int.Parse(this.textBox5.Text);
                     int Speciality = int.Parse(this.textBox6.Text);
 
-                    //Проверка учебного заведения
-                    int UchebnoeZavedenieCheck = 0;
-                    using (var con = new SqlConnection(connectionString))
-                    {
-                        var sql = "SELECT Kod FROM EducationInstitut";
-                        using (var cmd = new SqlCommand(sql, con))
-                        {
-                            cmd.Parameters.AddWithValue("@UchebnoeZavedenieCheck", textBox3.Text);
-                            con.Open();
-                            UchebnoeZavedenieCheck = (int)cmd.ExecuteScalar();
-                            if (UchebnoeZavedenieCheck != KodEducationalInstitut)
-                                MessageBox.Show("Такого учебного заведения не существует. Попробуйте еще раз.");
-                        }
-                        con.Close();
-                    }
-                    //Проверка формы обучения
-                    int FormaObychenCheck = 0;
-                    using (var con = new SqlConnection(connectionString))
-                    {
-                        var sql = "SELECT Kod FROM FormObuch";
-                        using (var cmd = new SqlCommand(sql, con))
-                        {
-                            cmd.Parameters.AddWithValue("@FormaObychenCheck", textBox4.Text);
-                            con.Open();
-                            FormaObychenCheck = (int)cmd.ExecuteScalar();
-                            if (FormaObychenCheck != FormObuch)
-                                MessageBox.Show("Такой формы обучения не существует. Попробуйте еще раз.");
-                        }
-                        con.Close();
-                    }
-
-                    //Проверка кода факультета
-                    int KodFacultetaCheck = 0;
-                    using (var con = new SqlConnection(connectionString))
-                    {
-                        var sql = "SELECT Kod FROM Facultet";
-                        using (var cmd = new SqlCommand(sql, con))
-                        {
-                            cmd.Parameters.AddWithValue("@KodFacultetaCheck", textBox5.Text);
-                            con.Open();
-                            KodFacultetaCheck = (int)cmd.ExecuteScalar();
-                            if (KodFacultetaCheck != Facultet)
-                                MessageBox.Show("Такого факультета не существует. Попробуйте еще раз.");
-                        }
-                        con.Close();
-                    }
-
-                    //Проверка специальности
-                    int SpecialityCheck = 0;
-                    using (var con = new SqlConnection(connectionString))
-                    {
-                        var sql = "SELECT Kod FROM Speciality";
-                        using (var cmd = new SqlCommand(sql, con))
-                        {
-                            cmd.Parameters.AddWithValue("@Speciality", textBox6.Text);
-                            con.Open();
-                            SpecialityCheck = (int)cmd.ExecuteScalar();
-                            if (SpecialityCheck != Speciality)
-                                MessageBox.Show("Такой специальности не существует. Попробуйте еще раз.");
-                        }
-                        con.Close();
-                    }
 
                     conn = new SqlConnection();
                     conn.ConnectionString = connectionString;
@@ -353,7 +291,8 @@ namespace KursFirst
                     conn.Open();
 
                     SqlCommand myCommand = conn.CreateCommand();
-                    myCommand.CommandText = "DELETE FROM Students WHERE KodStudentRecordBook = @KodStudentRecordBook";
+                    myCommand.CommandText = "DELETE FROM Student WHERE KodStudentRecordBook = @KodStudentRecordBook";
+
                     myCommand.Parameters.Add("@KodStudentRecordBook", SqlDbType.Int, 4);
                     myCommand.Parameters["@KodStudentRecordBook"].Value = KodStudentRecordBook;
 

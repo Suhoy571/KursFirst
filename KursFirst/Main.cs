@@ -20,6 +20,7 @@ namespace KursFirst
 
         }
 
+        //Кампания
         private void button1_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection();
@@ -36,6 +37,7 @@ namespace KursFirst
             conn.Dispose();
         }
 
+        //Учебное заведение
         private void button2_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection();
@@ -52,6 +54,7 @@ namespace KursFirst
             conn.Dispose();
         }
 
+        //Факультет
         private void button3_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection();
@@ -68,6 +71,7 @@ namespace KursFirst
             conn.Dispose();
         }
 
+        //Форма обучения
         private void button4_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection();
@@ -84,11 +88,12 @@ namespace KursFirst
             conn.Dispose();
         }
 
+        //Результирующая таблица
         private void button5_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection();
             conn.ConnectionString = connectionString;
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT Kod AS [Код формы обучения], KodStudentRecordBook AS [Код зачетки студента], " +
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT Kod AS [Номер записи], KodStudentRecordBook AS [Код зачетки студента], " +
                 "NumberCompany AS [Номер кампании], NameCompany AS [Название кампании], " +
                 "FIOotVuza AS [Фамилия руководителя от ВУЗа], DoljnostOtVuza AS [Должность руководителя от ВУЗа], " +
                 "FIOotPrep AS [Должность руководителя от Предприятия], DateStart AS [Дата начала практики], " + 
@@ -103,6 +108,7 @@ namespace KursFirst
             conn.Dispose();
         }
 
+        //Специальность
         private void button6_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection();
@@ -119,6 +125,7 @@ namespace KursFirst
             conn.Dispose();
         }
 
+        //Студент
         private void button7_Click(object sender, EventArgs e)
         {
             conn = new SqlConnection();
@@ -139,6 +146,49 @@ namespace KursFirst
         {
             Company Form2 = new Company();
             Form2.ShowDialog();
+            button1_Click(sender, e);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Institute Form3 = new Institute();
+            Form3.ShowDialog();
+            button2_Click(sender, e);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Facultet Form4 = new Facultet();
+            Form4.ShowDialog();
+            button3_Click(sender, e);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            FormObuch Form5 = new FormObuch();
+            Form5.ShowDialog();
+            button4_Click(sender, e);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Result Form6 = new Result();
+            Form6.ShowDialog();
+            button5_Click(sender, e);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Speciality Form7 = new Speciality();
+            Form7.ShowDialog();
+            button6_Click(sender, e);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Student Form8 = new Student();
+            Form8.ShowDialog();
+            button7_Click(sender, e);
         }
     }
 }
